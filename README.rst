@@ -21,6 +21,12 @@ License
 
 This project is licensed under the MIT License.
 
+Links
+-----
+
+* `Download <https://pypi.org/project/filelisting/#files>`_
+* `Source <https://github.com/johannes-programming/filelisting>`_
+
 Credits
 -------
 - Author: Johannes Programming
