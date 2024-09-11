@@ -6,10 +6,6 @@ import getoptify as _getoptify
 _CONTEXT_SETTINGS = dict(help_option_names=["-h", "--help"])
 
 
-def file_list(*paths):
-    return list(file_generator(*paths))
-
-
 def file_generator(*paths):
     for raw_path in paths:
         path = raw_path
@@ -22,6 +18,10 @@ def file_generator(*paths):
             for fname in fnames:
                 file = _os.path.join(root, fname)
                 yield file
+
+
+def file_list(*paths):
+    return list(file_generator(*paths))
 
 
 @_getoptify.command(shortopts="hV")
