@@ -1,21 +1,16 @@
 import os as _os
 
-import wonderparse as _wp
+import click as _click
+import getoptify as _getoptify
 
+_CONTEXT_SETTINGS = dict(help_option_names=["-h", "--help"])
 
-def main(args=None):
-    _wp.easymode.simple_run(
-        args=args,
-        program_object=file_list,
-        prog='filelisting',
-        endgame='iterprint',
-    )
 
 def file_list(*paths):
     return list(file_generator(*paths))
 
+
 def file_generator(*paths):
-    ans = list()
     for raw_path in paths:
         path = raw_path
         path = _os.path.expanduser(path)
@@ -23,10 +18,21 @@ def file_generator(*paths):
         if _os.path.isfile(path):
             yield path
             continue
-        for (root, dirnames, filenames) in _os.walk(path):
-            for filename in filenames:
-                file = _os.path.join(root, filename)
+        for root, dnames, fnames in _os.walk(path):
+            for fname in fnames:
+                file = _os.path.join(root, fname)
                 yield file
-    
-if __name__ == '__main__':
-    main() 
+
+
+@_getoptify.command(shortopts="hV")
+@_click.command(context_settings=_CONTEXT_SETTINGS)
+@_click.version_option(None, "-V", "--version")
+@_click.argument("path", nargs=-1)
+def main(path):
+    """List files under given paths."""
+    for f in file_list(*path):
+        _click.echo(f)
+
+
+if __name__ == "__main__":
+    main()
