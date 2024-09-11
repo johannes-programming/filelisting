@@ -16,6 +16,18 @@ To install ``filelisting``, you can use ``pip``. Open your terminal and run:
 
     pip install filelisting
 
+CLI
+---
+
+The project provides a CLI. For more information apply the ``--help`` flag.
+
+Features
+--------
+
+* ``main`` constitutes the CLI
+* ``file_generator`` takes an arbitrary number of paths and iterates over the references files
+* ``file_list`` returns a list version of ``file_generator``
+
 License
 -------
 
