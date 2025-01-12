@@ -7,7 +7,7 @@ import preparse
 __all__ = ["file_generator", "file_list", "main"]
 
 
-def file_generator(*paths: Any) -> Generator[str]:
+def file_generator(*paths: Any) -> Generator[str, None, None]:
     "This generator yields the files under the given path."
     for raw_path in paths:
         path = str(raw_path)
