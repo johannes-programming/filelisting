@@ -24,7 +24,7 @@ keywords = []
 name = "filelisting"
 readme = "README.rst"
 requires-python = ">=3.11"
-version = "1.2.3"
+version = "1.2.4"
 
 [project.license]
 file = "LICENSE.txt"
