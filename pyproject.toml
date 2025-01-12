@@ -9,6 +9,7 @@ authors = [
     { email = "johannes-programming@mailfence.com", name = "Johannes" },
 ]
 classifiers = [
+    "Development Status :: 5 - Production/Stable",
     "License :: OSI Approved :: MIT License",
     "Programming Language :: Python",
     "Programming Language :: Python :: 3",
@@ -16,19 +17,21 @@ classifiers = [
 ]
 dependencies = [
     "click>=8.1.7",
-    "getoptify>=1.0.1",
+    "preparse>=0.0.11",
 ]
-description = "List files under given paths."
+description = "This project lists files under given paths."
 keywords = []
 name = "filelisting"
 readme = "README.rst"
 requires-python = ">=3.11"
-version = "1.2.2"
+version = "1.2.3"
 
 [project.license]
 file = "LICENSE.txt"
 
 [project.urls]
-Documentation = "https://pypi.org/project/filelisting"
+Documentation = "https://filelisting.johannes-programming.online/"
 Download = "https://pypi.org/project/filelisting/#files"
-Source = "https://github.com/johannes-programming/filelisting"
+Index = "https://pypi.org/project/filelisting/"
+Source = "https://github.com/johannes-programming/filelisting/"
+Website = "https://filelisting.johannes-programming.online/"
