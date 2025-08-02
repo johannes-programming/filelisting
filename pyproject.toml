@@ -20,14 +20,14 @@ classifiers = [
 ]
 dependencies = [
     "click>=8.1.7",
-    "preparse>=0.0.11",
+    "preparse>=0.1.0.dev0",
 ]
 description = "This project lists files under given paths."
 keywords = []
 name = "filelisting"
 readme = "README.rst"
 requires-python = ">=3.11"
-version = "1.2.4+local"
+version = "1.2.5"
 
 [project.license]
 file = "LICENSE.txt"
