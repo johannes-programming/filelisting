@@ -6,7 +6,7 @@ requires = [
 
 [project]
 authors = [
-    { email = "johannes-programming@mailfence.com", name = "Johannes" },
+    { email = "johannes.programming@gmail.com", name = "Johannes" },
 ]
 classifiers = [
     "Development Status :: 5 - Production/Stable",
@@ -20,20 +20,19 @@ classifiers = [
 ]
 dependencies = [
     "click>=8.1.7",
-    "preparse>=0.1.0.dev0",
+    "preparse>=0.1.1",
 ]
 description = "This project lists files under given paths."
 keywords = []
 name = "filelisting"
 readme = "README.rst"
 requires-python = ">=3.11"
-version = "1.2.5"
+version = "1.2.6"
 
 [project.license]
 file = "LICENSE.txt"
 
 [project.urls]
-Documentation = "https://filelisting.johannes-programming.online/"
 Download = "https://pypi.org/project/filelisting/#files"
 Index = "https://pypi.org/project/filelisting/"
 Source = "https://github.com/johannes-programming/filelisting/"
