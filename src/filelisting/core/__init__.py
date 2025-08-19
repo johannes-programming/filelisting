@@ -22,7 +22,7 @@ def file_generator(*paths: Any) -> Generator[str, None, None]:
                 yield file
 
 
-def file_list(*paths: Any) -> List[str]:
+def file_list(*paths: Any) -> list[str]:
     "This function returns a list of the files under the given path."
     return list(file_generator(*paths))
 
@@ -32,8 +32,9 @@ def file_list(*paths: Any) -> List[str]:
 @click.help_option("-h", "--help")
 @click.version_option(None, "-V", "--version")
 @click.argument("path", nargs=-1)
-def main(path: Iterable) -> None:
+def main(path: Iterable[str]) -> None:
     "This command lists files under given paths."
+    f: str
     for f in file_list(*path):
         click.echo(f)
 

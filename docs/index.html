@@ -34,24 +34,15 @@
                     <dd id="featuresCorpus">
                         <dl class="heading4">
                             <dt id="file_generator">
-                                <code>
-                                    <i>file_generator</i><em>(</em><i>*paths: Any</i><em>)</em>
-                                    <i>-> Generator[str]</i>
-                                </code>
+                                filelisting.file_generator(*paths: Any) -> Generator[str]
                             </dt>
                             <dd>This generator yields the files under the given path.</dd>
                             <dt id="file_list">
-                                <code>
-                                    <i>file_list</i><em>(</em><i>*paths: Any</i><em>)</em>
-                                    <i>-> List[str]</i>
-                                </code>
+                                filelisting.file_list(*paths: Any) -> list[str]
                             </dt>
                             <dd>This function returns a list of the files under the given path.</dd>
                             <dt id="main">
-                                <code>
-                                    <i>main</i><em>(</em><i>*args: Any</i>, <i>**kwargs: Any</i><em>)</em>
-                                    <i>-> Any</i>
-                                </code>
+                                filelisting.main(*args: Any, **kwargs: Any) -> Any
                             </dt>
                             <dd>
                                 This <a href="https://click.palletsprojects.com/en/stable/">click</a> command provides the CLI.
