@@ -31,11 +31,11 @@ def file_list(*paths: Any) -> list[str]:
 @click.command(add_help_option=False)
 @click.help_option("-h", "--help")
 @click.version_option(None, "-V", "--version")
-@click.argument("path", nargs=-1)
-def main(path: Iterable[str]) -> None:
+@click.argument("paths", nargs=-1)
+def main(paths: Iterable[str]) -> None:
     "This command lists files under given paths."
     f: str
-    for f in file_list(*path):
+    for f in file_list(*paths):
         click.echo(f)
 
 
