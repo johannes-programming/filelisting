@@ -1,7 +1,7 @@
 [build-system]
 build-backend = "setuptools.build_meta"
 requires = [
-    "setuptools>=61.0.0",
+    "setuptools>=61.0,<62",
 ]
 
 [project]
@@ -19,8 +19,8 @@ classifiers = [
     "Typing :: Typed",
 ]
 dependencies = [
-    "click>=8.1.7",
-    "preparse>=0.1.6",
+    "click>=8.2.1,<9",
+    "preparse>=0.1.6,<1",
 ]
 description = "This project lists files under given paths."
 keywords = []
