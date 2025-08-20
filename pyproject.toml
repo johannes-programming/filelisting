@@ -19,8 +19,8 @@ classifiers = [
     "Typing :: Typed",
 ]
 dependencies = [
-    "click>=8.2.1,<9",
-    "preparse>=0.1.6,<1",
+    "click>=8.2,<9",
+    "preparse>=0.1.6,<2",
 ]
 description = "This project lists files under given paths."
 keywords = []
