@@ -9,6 +9,13 @@ __all__ = ["file_generator", "file_list", "main"]
 
 def file_generator(*paths: Any) -> Generator[str, None, None]:
     "This generator yields the files under the given path."
+    dnames: Any
+    file: Any
+    fname: Any
+    fnames: Any
+    path: str
+    raw_path: Any
+    root: Any
     for raw_path in paths:
         path = str(raw_path)
         path = os.path.expanduser(path)
@@ -22,7 +29,7 @@ def file_generator(*paths: Any) -> Generator[str, None, None]:
                 yield file
 
 
-def file_list(*paths: Any) -> List[str]:
+def file_list(*paths: Any) -> list[str]:
     "This function returns a list of the files under the given path."
     return list(file_generator(*paths))
 
@@ -31,10 +38,11 @@ def file_list(*paths: Any) -> List[str]:
 @click.command(add_help_option=False)
 @click.help_option("-h", "--help")
 @click.version_option(None, "-V", "--version")
-@click.argument("path", nargs=-1)
-def main(path: Iterable) -> None:
+@click.argument("paths", nargs=-1)
+def main(paths: Iterable[str]) -> None:
     "This command lists files under given paths."
-    for f in file_list(*path):
+    f: str
+    for f in file_list(*paths):
         click.echo(f)
 
 
