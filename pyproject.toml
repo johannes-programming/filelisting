@@ -1,7 +1,7 @@
 [build-system]
 build-backend = "setuptools.build_meta"
 requires = [
-    "setuptools>=61.0,<62",
+    "setuptools>=64",
 ]
 
 [project]
@@ -27,7 +27,7 @@ keywords = []
 name = "filelisting"
 readme = "README.rst"
 requires-python = ">=3.11"
-version = "1.2.6+local"
+version = "1.2.7"
 
 [project.license]
 file = "LICENSE.txt"
