@@ -2,6 +2,7 @@ import os
 from typing import *
 
 import click
+import expandpath
 import preparse
 
 __all__ = ["file_generator", "file_list", "main"]
@@ -17,9 +18,7 @@ def file_generator(*paths: Any) -> Generator[str, None, None]:
     raw_path: Any
     root: Any
     for raw_path in paths:
-        path = str(raw_path)
-        path = os.path.expanduser(path)
-        path = os.path.expandvars(path)
+        path = expandpath.expandpath(str(raw_path))
         if os.path.isfile(path):
             yield path
             continue
