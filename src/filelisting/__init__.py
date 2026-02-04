@@ -6,22 +6,27 @@ import wonderparse as _wp
 def main(args=None):
     _wp.easymode.simple_run(
         args=args,
-        program_object=list_files,
+        program_object=file_list,
         prog='filelisting',
         endgame='iterprint',
     )
 
-def list_files(*targets):
+def file_list(*paths):
+    return list(file_generator(*paths))
+
+def file_generator(*paths):
     ans = list()
-    for target in targets:
-        if _os.path.isfile(target):
-            ans.append(target)
+    for raw_path in paths:
+        path = raw_path
+        path = _os.path.expanduser(path)
+        path = _os.path.expandvars(path)
+        if _os.path.isfile(path):
+            yield path
             continue
-        for (root, dirnames, filenames) in _os.walk(target):
+        for (root, dirnames, filenames) in _os.walk(path):
             for filename in filenames:
                 file = _os.path.join(root, filename)
-                ans.append(file)
-    return ans  
+                yield file
     
 if __name__ == '__main__':
     main() 
