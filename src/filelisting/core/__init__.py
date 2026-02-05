@@ -27,13 +27,13 @@ def file_list(*paths: Any) -> List[str]:
     return list(file_generator(*paths))
 
 
-@preparse.PreParser(posix=False).click()
+@preparse.PreParser().click()
 @click.command(add_help_option=False)
 @click.help_option("-h", "--help")
 @click.version_option(None, "-V", "--version")
 @click.argument("path", nargs=-1)
-def main(path):
-    "List files under given paths."
+def main(path: Iterable) -> None:
+    "This command lists files under given paths."
     for f in file_list(*path):
         click.echo(f)
 
