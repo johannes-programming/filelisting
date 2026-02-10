@@ -7,9 +7,9 @@
             <dt>
                 <a>filelisting</a>
                 <p>
-                    Version:
+                    Minor Version:
                     <select id="version">
-                        <option selected>1.2.9</option>
+                        <option selected>1.2</option>
                     </select>
                 </p>
             </dt>
@@ -34,16 +34,16 @@
                         Features
                     </dt>
                     <dd id="featuresCorpus">
-                        <dl class="heading4">
-                            <dt id="1.2.9-file_generator">
+                        <dl class="heading4" version="1.2">
+                            <dt id="1--file_generator">
                                 filelisting.file_generator(*paths: Any) -> Generator[str]
                             </dt>
                             <dd>This generator yields the files under the given path.</dd>
-                            <dt id="1.2.9-file_list">
+                            <dt id="1--file_list">
                                 filelisting.file_list(*paths: Any) -> list[str]
                             </dt>
                             <dd>This function returns a list of the files under the given path.</dd>
-                            <dt id="1.2.9-main">
+                            <dt id="1--main">
                                 filelisting.main
                             </dt>
                             <dd>
@@ -51,7 +51,7 @@
                                     This <a href="https://click.palletsprojects.com/en/stable/">click</a> command provides the CLI.
                                 </p>
                             </dd>
-                            <dt id="1.2.9-test">
+                            <dt id="1--test">
                                 filelisting.test() -> unittest.TextTestResult
                             </dt>
                             <dd class="testingCorpus">
