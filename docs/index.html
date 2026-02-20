@@ -72,14 +72,20 @@
             </dd>
         </dl>
     </body>
-    <script src="https://www.johannes-programming.online/script.js">
-    </script>
-    <script>
-        setupLinksCorpus("filelisting");
-        setupInstallCorpus("filelisting");
-        setupTestingCorpus("filelisting");
-        setupLicenseCorpus("filelisting");
+    <script type="module">
+        import {
+            setupImpressumCorpus,
+            setupInstallCorpus,
+            setupLicenseCorpus,
+            setupLinksCorpus,
+            setupTestingCorpus,
+            addMetaAndLinkTags,
+        } from "https://www.johannes-programming.online/main.js";
         setupImpressumCorpus("filelisting");
+        setupInstallCorpus("filelisting");
+        setupLicenseCorpus("filelisting");
+        setupLinksCorpus("filelisting");
+        setupTestingCorpus("filelisting");
         addMetaAndLinkTags();
     </script>
 </html>
