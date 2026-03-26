@@ -1,91 +1,23 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
+        <link rel="icon" type="image/svg+xml" href="https://www.johannes-programming.online/icon.svg">
+        <link rel="stylesheet" href="https://www.johannes-programming.online/versioning/styles.css">
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>filelisting</title>
     </head>
     <body>
-        <dl class="heading0">
-            <dt>
-                <a>filelisting</a>
-                <p>
-                    Minor Version:
-                    <select id="version">
-                        <option selected>1.2</option>
-                    </select>
-                </p>
-            </dt>
-            <dd>
-                <dl class="heading1">
-                    <dt id="intro">
-                        Introduction
-                    </dt>
-                    <dd id="introCorpus">
-                        <p>
-                            This project creates a list of all the files under given paths.
-                        </p>
-                    </dd>
-                    <dt id="links">Links</dt>
-                    <dd id="linksCorpus"></dd>
-                    <dt id="install">
-                        Installation
-                    </dt>
-                    <dd id="installCorpus">
-                    </dd>
-                    <dt id="features">
-                        Features
-                    </dt>
-                    <dd id="featuresCorpus">
-                        <dl class="heading4" version="1.2">
-                            <dt id="1--file_generator">
-                                filelisting.file_generator(*paths: Any) -> Generator[str]
-                            </dt>
-                            <dd>This generator yields the files under the given path.</dd>
-                            <dt id="1--file_list">
-                                filelisting.file_list(*paths: Any) -> list[str]
-                            </dt>
-                            <dd>This function returns a list of the files under the given path.</dd>
-                            <dt id="1--main">
-                                filelisting.main
-                            </dt>
-                            <dd>
-                                <p>
-                                    This <a href="https://click.palletsprojects.com/en/stable/">click</a> command provides the CLI.
-                                </p>
-                            </dd>
-                            <dt id="1--test">
-                                filelisting.test() -> unittest.TextTestResult
-                            </dt>
-                            <dd class="testingCorpus">
-                            </dd>
-                        </dl>
-                    </dd>
-                    <dt id="license">
-                        License
-                    </dt>
-                    <dd id="licenseCorpus">
-                    </dd>
-                    <dt id="impressum">
-                        Impressum
-                    </dt>
-                    <dd id="impressumCorpus">
-                    </dd>
-                </dl>
-            </dd>
-        </dl>
+        <header>
+            <a href="https://filelisting.johannes-programming.online/">filelisting</a>
+            <p>
+                Minor Version:
+                <select id="version">
+                    <option selected>1.2</option>
+                </select>
+            </p>
+        </header>
+        <div id="rst"></div>
     </body>
-    <script type="module">
-        import {
-            setupImpressumCorpus,
-            setupInstallCorpus,
-            setupLicenseCorpus,
-            setupLinksCorpus,
-            setupTestingCorpus,
-            addMetaAndLinkTags,
-        } from "https://www.johannes-programming.online/main.js";
-        setupImpressumCorpus("filelisting");
-        setupInstallCorpus("filelisting");
-        setupLicenseCorpus("filelisting");
-        setupLinksCorpus("filelisting");
-        setupTestingCorpus("filelisting");
-        addMetaAndLinkTags();
-    </script>
+    <script type="module" src="https://www.johannes-programming.online/versioning/main.js"></script>
 </html>

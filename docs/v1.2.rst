@@ -1,0 +1,64 @@
+Introduction
+------------
+
+This project creates a list of all the files under given paths.
+
+Installation
+------------
+
+To install filelisting, you can use pip. Open your terminal and run:
+
+.. code-block:: shell
+
+    pip install filelisting
+
+Features
+--------
+
+``filelisting.file_generator(*paths: Any) -> Generator[str]``
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+This generator yields the files under the given path.
+
+``filelisting.file_list(*paths: Any) -> list[str]``
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+This function returns a list of the files under the given path.
+
+``filelisting.main``
+~~~~~~~~~~~~~~~~~~~~
+
+This click command provides the CLI.
+
+``filelisting.test() -> unittest.TextTestResult``
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+This project can be tested through its test function.
+
+.. code-block:: python
+
+    import filelisting
+    filelisting.test()
+
+License
+-------
+
+This project is licensed under the MIT License.
+
+Links
+-----
+
+- Download: https://pypi.org/project/filelisting/#files
+- Index: https://pypi.org/project/filelisting/
+- Source: https://github.com/johannes-programming/filelisting/
+- Website: https://filelisting.johannes-programming.online/
+
+Impressum
+---------
+
+**Johannes Programming**
+
+- Name: Johannes
+- Email: johannes.programming@gmail.com
+- Homepage: https://www.johannes-programming.online/
+- Gravatar: https://www.johannes-programming.fyi/
