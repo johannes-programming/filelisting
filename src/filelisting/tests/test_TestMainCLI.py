@@ -14,20 +14,26 @@ class TestMainCLI(unittest.TestCase):
         self.runner = CliRunner()
 
     @patch.object(filelisting.core, "file_list")
-    def test_main_lists_files_to_stdout(self, mock_file_list) -> None:
+    def test_main_lists_files_to_stdout(
+        self: Self, mock_file_list: Any
+    ) -> None:
         result: Any
         mock_file_list.return_value = ["/tmp/a", "/tmp/b"]
         result = self.runner.invoke(filelisting.core.main, ["path1", "path2"])
         self.assertEqual(result.exit_code, 0)
         # Each file on its own line
-        self.assertEqual(result.output.strip().splitlines(), ["/tmp/a", "/tmp/b"])
+        self.assertEqual(
+            result.output.strip().splitlines(), ["/tmp/a", "/tmp/b"]
+        )
         mock_file_list.assert_called_once_with("path1", "path2")
 
     def test_main_help_option(self: Self) -> None:
         result: Any
         result = self.runner.invoke(filelisting.core.main, ["-h"])
         self.assertEqual(result.exit_code, 0)
-        self.assertIn("This command lists files under given paths.", result.output)
+        self.assertIn(
+            "This command lists files under given paths.", result.output
+        )
 
     def test_main_version_option(self: Self) -> None:
         result: Any

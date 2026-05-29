@@ -68,7 +68,9 @@ class TestFileGeneratorAndList(unittest.TestCase):
 
                 # expanduser should just pass through, expandvars returns real path
                 mock_user.side_effect = lambda p: p  # no-op
-                mock_vars.side_effect = lambda p: p.replace("$MY_TEST_DIR", env_dir)
+                mock_vars.side_effect = lambda p: p.replace(
+                    "$MY_TEST_DIR", env_dir
+                )
 
                 given = "$MY_TEST_DIR"
                 files = list(filelisting.core.file_generator(given))
