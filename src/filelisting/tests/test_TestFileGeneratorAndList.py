@@ -1,7 +1,7 @@
 import os
 import tempfile
 import unittest
-from typing import *
+from typing import Any, Self
 from unittest.mock import patch
 
 import filelisting.core

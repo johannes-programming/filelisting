@@ -1,5 +1,6 @@
 import os
-from typing import *
+from collections.abc import Generator, Iterable
+from typing import Any
 
 import click
 import expandpath
